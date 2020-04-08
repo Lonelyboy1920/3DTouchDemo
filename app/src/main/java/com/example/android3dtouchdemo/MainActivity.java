@@ -2,6 +2,7 @@ package com.example.android3dtouchdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 为App创建动态Shortcuts
      */
+    @TargetApi(Build.VERSION_CODES.N_MR1)
     private void initDynamicShortcuts() {
         //①、创建动态快捷方式的第一步，创建ShortcutManager
         ShortcutManager scManager = getSystemService(ShortcutManager.class);
